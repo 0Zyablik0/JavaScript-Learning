@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Just an example</h1>
+    <div id="one" class="example">Hi!</div>
+    <div id="two" class="example">Hi!</div>
+    <div id="three" class="something">Hi!</div>
+</body>
+<script>
+    /// By Id
+    console.log(document.getElementById("two"));
+    /// By Tag Name
+    console.log(document.getElementsByTagName("div"));
+    console.log(document.getElementsByTagName("h1"));
+    console.log(document.getElementsByTagName("h2"));
+    /// By Class Name
+    console.log(document.getElementsByClassName("example"));
+    /// CSS selector: querySelector
+    console.log(document.querySelector("div"));
+    console.log(document.querySelector(".something"));
+    /// CSS selector: querySelectorAll
+    console.log(document.querySelectorAll("div"));
+
+</script>
+
+</html>
