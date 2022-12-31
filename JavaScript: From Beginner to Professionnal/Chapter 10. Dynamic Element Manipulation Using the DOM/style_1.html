@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function doMagic() {
+            let elem = document.querySelector("#magic");
+            if (elem.style.display == "none") {
+                elem.style.display = "block";
+            } else {
+                elem.style.display = "none";
+            }
+
+        }
+
+    </script>
+    <p id="magic">I might disappear and appear</p>
+    <button onclick="doMagic()">Magic!</button>
+</body>
+
+</html>

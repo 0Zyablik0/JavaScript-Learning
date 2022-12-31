@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function change(){
+                let elem = document.getElementById("shape");
+                elem.setAttribute("class", "circle");
+                elem.setAttribute("id", "new");
+                elem.setAttribute("style", "background-color: red;border: 1px solid black;")
+
+            }
+
+        </script>
+        <style>
+            .square{
+                height: 100px;
+                width: 100px;
+                background-color: yellow;
+            }
+
+            .circle{
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+
+        </style>
+        <div id="shape" class="square"></div>
+        <button onclick="change()">Change attributes!</button>
+    </body>
+</html>

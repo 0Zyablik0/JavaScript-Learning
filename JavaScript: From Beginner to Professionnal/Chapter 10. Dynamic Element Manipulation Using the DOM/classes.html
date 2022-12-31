@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function toggle() {
+            document.getElementById("shape").classList.toggle("hide");
+        }
+
+        function add_blue(){
+            document.getElementById("shape").classList.add("blue");
+        }
+        function delete_blue(){
+            document.getElementById("shape").classList.remove("blue");
+        }
+
+
+    </script>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .square.blue {
+            background: blue;
+        }
+    </style>
+    <div id="shape" class="square"></div>
+    <button onclick="toggle()">Change visibility!</button>
+    <button onclick="add_blue()">Make blue!</button>
+    <button onclick="delete_blue()">Delete blue!</button>
+
+</body>
+
+</html>
