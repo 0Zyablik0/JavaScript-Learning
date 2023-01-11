@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Onclick events
+    </title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="white"> White</div>
+    <div id="red"> Red</div>
+    <div id="green"> Green</div>
+    <div id="blue"> Blue </div>
+    <div id="black"> Black</div>
+    <div id="yellow"> Yellow</div>
+    <div id="purple"> Purple</div>
+
+    <script>
+
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color
+            console.log("Color changed to", color)
+        }
+
+        divs = document.querySelectorAll('div')
+
+        for (let elem of divs) {
+            elem.addEventListener('click', function () { changeBackground(elem.id) })
+        }
+
+    </script>
+
+</body>
+
+</html>
