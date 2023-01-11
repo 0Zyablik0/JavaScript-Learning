@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function message(string, event) {
+            console.log(`event: ${event}`);
+            console.log(`message: ${string}`);
+        }
+        document.addEventListener("DOMContentLoaded", (e) => { message("Document Ready", e); });
+        window.onload = (e) => { message("Window Ready", e); };
+        
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
