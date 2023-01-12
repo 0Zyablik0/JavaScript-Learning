@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mouse Events 1</title>
+</head>
+
+<body>
+    <script>
+        function changeColor(elem, color) {
+            console.log("change color to", color)
+            elem.style.backgroundColor = color;
+        };
+
+        window.onload = function () {
+            console.log("hi!");
+            elem = document.getElementById("divvy");
+            elem.addEventListener("mousedown", function () { changeColor(this, "green") });
+            elem.addEventListener("mouseup", function () { changeColor(this, "yellow") });
+            elem.addEventListener("dblclick", function () { changeColor(this, "black") });
+            elem.addEventListener("mouseout", function () { changeColor(this, "blue") });
+            console.log("bye!");
+        }
+    </script>
+    <div id="divvy" style="width: 100px; height: 100px; background-color: pink;"> </div>
+</body>
+
+</html>

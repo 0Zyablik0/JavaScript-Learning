@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Mouse Events
+    </title>
+    <script>
+        function initPage() {
+            elem = document.getElementsByClassName("element").item(0);
+            elem.textContent = "Hello, world!";
+            elem.style.height = "2em";
+            elem.style.width = "300px";
+            elem.style.padding = "0.5em";
+            elem.style.fontSize = "32px";
+            elem.style.fontFamily = "Arial, Helvetica, sans-serif";
+            elem.style.backgroundColor = "white";
+
+            elem.addEventListener("mousedown", function (e) { changeColorOnEvent("blue", e); });
+            elem.addEventListener("mouseover", function (e) { changeColorOnEvent("yellow", e); });
+            elem.addEventListener("mouseout", function (e) { changeColorOnEvent("white", e); });
+            elem.addEventListener("mousedown", function (e) { changeColorOnEvent("blue", e); });
+            elem.addEventListener("mouseup", function (e) { changeColorOnEvent("green", e); });
+            elem.addEventListener("dblclick", function (e) { changeColorOnEvent("pink", e); });
+        }
+
+        function changeColorOnEvent(color, event) {
+            console.log(`color: ${color}, event: ${event.type}`);
+            elem = document.getElementsByClassName("element").item(0);
+            elem.style.backgroundColor = color;
+        }
+
+        window.onload = initPage;
+    </script>
+</head>
+
+<body>
+    <div class="element">
+
+    </div>
+</body>
+
+</html>
