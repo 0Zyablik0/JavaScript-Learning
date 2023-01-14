@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="welcome">Hi there!</div>
+    <form>
+        <input type="text" name="firstName" placeholder="First name" />
+        <input type="text" name="lastName" placeholder="Last name" />
+        <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+    <script>
+        function sendInfo() {
+            let p = event.target.parentElement;
+            message("Welcome, " +  p.firstName.value + " " + p.lastName.value + "!");
+        }
+
+        function message(m) {
+            document.getElementById("welcome").innerHTML = m;
+
+        }
+    </script>
+</body>
+
+</html>
