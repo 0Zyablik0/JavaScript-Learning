@@ -88,3 +88,73 @@ interface WordCounts {
 let counts: WordCounts = {};
 counts.apple = 0;
 counts.banana = 1;
+
+
+// Nested Interfaces
+interface Novel {
+    author: {
+        name: string;
+    }
+    setting: Setting;
+}
+
+interface Setting {
+    place: string;
+    year: number;
+}
+
+let novel: Novel = {
+    author: {
+        name: "Jane Austen"
+    },
+    setting: {
+        place: "England",
+        year: 1812,
+
+    }
+}
+
+// Interface Extension
+
+interface WrittenArt {
+    title: string;
+}
+
+interface Novella extends WrittenArt {
+    pases: number;
+};
+
+// Extend Multiple Interfaces
+
+interface GivesNumber {
+    giveNumber(): number;
+}
+
+interface GivesString {
+    giveString(): string;
+}
+
+interface GivesBothAndEither extends GivesNumber, GivesString {
+    giveEither(): number | string;
+}
+
+function useGiveBoth(arg: GivesBothAndEither) {
+    arg.giveEither();
+    arg.giveNumber();
+    arg.giveString();
+}
+
+// Interface Merging
+
+interface Merged {
+    firstProperty: string;
+}
+
+interface Merged {
+    secondProperty: string;
+}
+
+let merged: Merged = {
+    firstProperty: "first",
+    secondProperty: "second",
+};
