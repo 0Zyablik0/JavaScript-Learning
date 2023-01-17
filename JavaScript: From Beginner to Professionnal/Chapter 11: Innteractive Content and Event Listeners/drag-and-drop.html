@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="drag-and-drop.css" />
+    </head>
+    <body>
+        <div class="box" ondrop="dDrop()" ondragover="nDrop()">
+            1
+            <div id="dragme" draggable="true" ondragstart="dStart()">
+                Drag Me Please!
+            </div>
+        </div>
+        <div class="box" ondrop="dDrop()" ondragover="nDrop()">2</div>
+        <script src="drag-and-drop.js"></script>
+    </body>
+</html>
