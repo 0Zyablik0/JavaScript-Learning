@@ -70,3 +70,27 @@ class Quote {
 
 
 // Classes as Types
+
+class Teacher {
+    sayHello() {
+        console.log("Hello!");
+    }
+}
+
+
+let teacher: Teacher;
+teacher = new Teacher();
+
+class SchoolBus {
+    getAttributes(): string[] {
+        return ["magic", "shapeShifting"];
+    }
+}
+
+function withSchoolBus(bus: SchoolBus) {
+    console.log(bus.getAttributes());
+}
+
+withSchoolBus({
+    getAttributes: () => ["hello"]
+}) // OK
