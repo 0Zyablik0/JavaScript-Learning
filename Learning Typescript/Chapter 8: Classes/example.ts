@@ -227,3 +227,35 @@ class Preschool extends AbstractSchool {
 
 let school: AbstractSchool;
 school = new Preschool("Preschool");
+
+// Member Visibility
+
+class Base {
+    isPublicImplicit = 0;
+    public isPublicExplicit = 1;
+    protected isProtected = 2;
+    private isPrivate = 3;
+    #truePrivate = 4;
+}
+
+class Subclass extends Base {
+    examples() {
+        this.isPublicExplicit
+        this.isPublicExplicit
+        this.isProtected
+    }
+}
+
+new Subclass().isPublicExplicit;
+new Subclass().isPublicImplicit;
+
+class TwoKeyWords {
+    private readonly name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    print() {
+        console.log(this.name)
+    }
+}
