@@ -206,3 +206,24 @@ class GradeAssignment extends Assignment {
     }
 
 }
+
+// Abstract Class
+
+abstract class AbstractSchool {
+    readonly name: string
+
+    constructor(name: string) {
+        this.name = name
+    }
+
+    abstract getStudentTypes(): string[];
+}
+
+class Preschool extends AbstractSchool {
+    getStudentTypes(): string[] {
+        return ["preschooler"]
+    }
+};
+
+let school: AbstractSchool;
+school = new Preschool("Preschool");
