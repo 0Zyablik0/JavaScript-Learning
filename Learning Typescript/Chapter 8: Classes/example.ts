@@ -259,3 +259,10 @@ class TwoKeyWords {
         console.log(this.name)
     }
 }
+
+// Static Field Modifiers
+
+class Question {
+    protected static readonly answer: string = "bash";
+    protected static readonly prompt: string = `What's an ogre's favorite programming language`
+}
