@@ -138,3 +138,71 @@ class ReportClass implements Graded, Reporter {
     }
 
 }
+
+//Extending a Class
+
+class StudentTeacher extends Teacher {
+    learn() {
+        console.log("Learning....")
+    }
+}
+
+let studentTeacher = new StudentTeacher();
+studentTeacher.sayHello();
+studentTeacher.learn();
+
+// Extension Assignability
+
+class Lesson {
+    subject: string;
+
+    constructor(subject: string) {
+        this.subject = subject;
+    }
+};
+
+class OnlineLesson extends Lesson {
+    url: string;
+
+    constructor(subject: string, url: string) {
+        super(subject)
+        this.url = url
+    }
+};
+
+let lesson: Lesson;
+lesson = new Lesson("coding")
+lesson = new OnlineLesson("coding", "oreilly.com");
+
+let online: OnlineLesson;
+online = new OnlineLesson("coding", "oreilly.com");
+
+// Overridden Methods
+
+class GradeCounter {
+    countGrades(grades: string[], letter: string) {
+        return grades.filter(grade => grade === letter).length;
+    }
+}
+
+class FailureCounter extends GradeCounter {
+    countGrades(grades: string[], letter: string): number {
+        return super.countGrades(grades, "F")
+    }
+}
+
+//Overridden Properties
+
+class Assignment {
+    grade?: number;
+}
+
+class GradeAssignment extends Assignment {
+    grade: number;
+
+    constructor(grade: number) {
+        super();
+        this.grade = grade // Should be assignable to be Overridden
+    }
+
+}
