@@ -44,8 +44,8 @@ class Secret<Key, Value>{
         this.value = value
     }
 
-    getValue(key: Key){
-        if (key === this.key){
+    getValue(key: Key) {
+        if (key === this.key) {
             return this.value
         }
         return undefined
@@ -54,4 +54,87 @@ class Secret<Key, Value>{
 
 const storage = new Secret(123, "value");
 let val = storage.getValue(123);
+
+//Explicit Generic Class Types
+
+class CurriedCallback<Input>{
+    #callback: (input: Input) => void;
+
+    constructor(callback: (input: Input) => void) {
+        this.#callback = (input: Input) => {
+            console.log("Input", input);
+            callback(input);
+        }
+    }
+
+    call(input: Input): void {
+        this.#callback(input);
+    }
+}
+
+new CurriedCallback((input: string) => {
+    console.log(input.length)
+});
+
+new CurriedCallback<string>((input) => {
+    console.log(input.length)
+});
+
+//Extending Generic Classes
+
+class QuoteClass<T>{
+    lines: T;
+    constructor(lines: T) {
+        this.lines = lines;
+    }
+
+}
+
+class SpokenQuoteClass extends QuoteClass<string[]>{
+    speak() {
+        console.log(this.lines.join('\n'));
+    }
+}
+
+class AttributedQuoteClass<Value> extends QuoteClass<Value>{
+    speaker: string;
+    constructor(value: Value, speaker: string) {
+        super(value);
+        this.speaker = speaker;
+    };
+}
+
+// Implementing Generic Interfaces
+
+interface ActorCredit<Role> {
+    role: Role;
+}
+
+class MoviePart implements ActorCredit<string>{
+    role: string;
+    speaking: boolean;
+
+    constructor(role: string, speaking: boolean) {
+        this.role = role;
+        this.speaking = speaking;
+    };
+}
+
+//Method Generics
+
+class CreatePairFactory<Key> {
+    key: Key;
+
+    constructor(key: Key) {
+        this.key = key;
+    }
+
+    createPair<Value>(value: Value) {
+        return { key: this.key, value }
+    }
+}
+
+const factory = new CreatePairFactory("role")
+const numberPair = factory.createPair(10)
+const stringPair = factory.createPair("Sophie")
 
