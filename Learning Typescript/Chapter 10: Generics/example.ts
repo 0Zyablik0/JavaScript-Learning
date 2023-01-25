@@ -146,4 +146,26 @@ type Nullish<T> = T | undefined | null
 type CreatesValue<Input, Output> = (input: Input) => Output;
 let creator: CreatesValue<string, number>;
 
-creator =  text => text.length
+creator = text => text.length;
+
+// Generic Discriminated Unions
+
+type Result<Data> = FailureResult | SuccessResult<Data>;
+
+interface FailureResult {
+    error: Error;
+    succeeded: false;
+};
+
+interface SuccessResult<Data> {
+    data: Data;
+    succeeded: true;
+};
+
+function handleResult(result: Result<string>) {
+    if (result.succeeded) {
+        console.log(result.data)
+    } else { 
+        console.log(result.error)
+    }
+}
