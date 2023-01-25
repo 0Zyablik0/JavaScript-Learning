@@ -138,3 +138,12 @@ const factory = new CreatePairFactory("role")
 const numberPair = factory.createPair(10)
 const stringPair = factory.createPair("Sophie")
 
+// Generic Type Aliases
+
+type Nullish<T> = T | undefined | null
+
+
+type CreatesValue<Input, Output> = (input: Input) => Output;
+let creator: CreatesValue<string, number>;
+
+creator =  text => text.length
