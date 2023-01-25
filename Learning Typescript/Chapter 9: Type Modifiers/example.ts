@@ -55,3 +55,43 @@ function PrintComedian(comedian: Comedian): void {
     }
     console.log(comedian.funny);
 }
+
+// Type Operators: keyof
+
+interface Ratings {
+    audience: number;
+    critics: number;
+}
+
+
+function getRating(ratings: Ratings, key: keyof Ratings): number {
+    return ratings[key];
+}
+
+
+// Type Operators: typeof
+const original = {
+    medium: "movie",
+    title: "Mean Girls",
+
+};
+
+let adaptation: typeof original;
+
+adaptation = {
+    medium: "play",
+    title: "Mean Girls",
+}
+
+// Type Operators: keyof typeof
+
+const ratings = {
+    imdb: 8.4,
+    metacritic: 82,
+}
+
+function logRatings(key: keyof typeof ratings){
+    console.log(ratings[key]);
+}
+
+logRatings("imdb");
