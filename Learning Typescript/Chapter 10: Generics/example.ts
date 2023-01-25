@@ -23,7 +23,7 @@ function logWrapper<Input>(callback: (input: Input) => void) {
 
 };
 
-logWrapper<string>((input) => {console.log(input.length)})
+logWrapper<string>((input) => { console.log(input.length) })
 //Multiple Function Parameters
 
 function makeTuple<First, Second>(first: First, second: Second) {
@@ -31,3 +31,27 @@ function makeTuple<First, Second>(first: First, second: Second) {
 }
 
 let tuple = makeTuple(10, "string")
+
+
+// Generic Class
+
+class Secret<Key, Value>{
+    key: Key;
+    value: Value;
+
+    constructor(key: Key, value: Value) {
+        this.key = key
+        this.value = value
+    }
+
+    getValue(key: Key){
+        if (key === this.key){
+            return this.value
+        }
+        return undefined
+    }
+}
+
+const storage = new Secret(123, "value");
+let val = storage.getValue(123);
+
