@@ -207,3 +207,18 @@ function printLength<T extends WithLength>(value: T) {
 
 printLength("Hello world!")
 printLength([1, 2, 3, 4])
+
+// key of and Constrained Type Parameters
+
+
+function get<T, Key extends keyof T>(container: T, key: Key) {
+    return container[key];
+}
+
+const roles = {
+    favorite: "Fargo",
+    others: ["Almost Famous", "Burn After Reading", "Nomadland"],
+}
+
+const favorite = get(roles, "favorite")
+const others = get(roles, "others")
