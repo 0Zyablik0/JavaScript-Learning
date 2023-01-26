@@ -95,3 +95,13 @@ function logRatings(key: keyof typeof ratings){
 }
 
 logRatings("imdb");
+
+//Type Assertions:
+
+
+const rawData = `["grace", "frankie"]`;
+
+let json_any = JSON.parse(rawData) // type: any
+let json_string = JSON.parse(rawData) as string // type: string
+let json_array = JSON.parse(rawData) as [string, string] // type: [string, string]
+let json_concrete = JSON.parse(rawData) as ["grace", "frankie"]; //type: ["grace", "frankie"]
