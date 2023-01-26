@@ -194,3 +194,16 @@ let oneDefault: KeyValuePair<number> = {
     key: 0,
     value: 10,
 }
+
+// Constrained Generic Types
+
+interface WithLength {
+    length: number;
+}
+
+function printLength<T extends WithLength>(value: T) {
+    console.log(value.length)
+}
+
+printLength("Hello world!")
+printLength([1, 2, 3, 4])
