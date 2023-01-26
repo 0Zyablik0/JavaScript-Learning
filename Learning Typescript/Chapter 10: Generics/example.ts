@@ -165,7 +165,32 @@ interface SuccessResult<Data> {
 function handleResult(result: Result<string>) {
     if (result.succeeded) {
         console.log(result.data)
-    } else { 
+    } else {
         console.log(result.error)
     }
+}
+
+//Generic Defaults
+
+interface GenericWithDefault<T = string> {
+    value: T;
+}
+
+let explicit: GenericWithDefault<number> = { value: 10 };
+let implicit: GenericWithDefault; // string
+
+
+interface KeyValuePair<Key, Value = Key> {
+    key: Key;
+    value: Value;
+}
+
+let allExplicit: KeyValuePair<string, number> = {
+    key: "rating",
+    value: 10,
+}
+
+let oneDefault: KeyValuePair<number> = {
+    key: 0,
+    value: 10,
 }
