@@ -58,3 +58,60 @@ console.log(arr.map((x) => 2**x))
 
 console.log(arr.lastIndexOf(1))
 console.log(arr.lastIndexOf(6))
+
+// String Methods
+
+
+// Combining strings
+let s1 = "Hello "
+let s2 = "Javascript"
+let result = s1.concat(s2)
+console.log(result)
+
+// Converting strings to array
+
+console.log(result.split(" "))
+console.log(result.split(""))
+
+// Converting an array to a string
+
+let letters = ['a', 'b', 'c', 'd']
+console.log(letters.join(""))
+console.log(letters.join("#"))
+
+// Working with index and positions
+let poem = "Roses are red, violets are blue, if I can do JS, then you can too!"
+console.log(poem.indexOf("re"))
+console.log(poem.lastIndexOf("re"))
+console.log(poem.indexOf("python"))
+
+console.log(poem.search("re"))
+console.log(poem.search("python"))
+
+console.log(poem.charAt(10))
+console.log(poem.charAt(10000)) //empty
+
+// Creating substring
+
+console.log(poem.slice(5))
+console.log(poem.slice(0, 3))
+
+// Replacing parts of the string
+
+console.log(poem.replace("JS", "Python"))
+console.log(poem.replace("green", "yellow"))
+
+console.log("hello hello".replace("hello", "oh"))
+console.log("hello hello".replaceAll("hello", "oh"))
+
+// Uppercase and lowercase
+
+console.log(poem.toUpperCase())
+console.log(poem.toLowerCase())
+
+// The start and the end of a string
+console.log(poem.startsWith("Roses"))
+console.log(poem.startsWith("Violets"))
+
+console.log(poem.endsWith("too!"))
+console.log(poem.endsWith("too?"))
