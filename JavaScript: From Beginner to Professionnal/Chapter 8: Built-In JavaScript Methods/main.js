@@ -25,3 +25,36 @@ console.log(parseFloat("hello"), typeof parseFloat("hello"))
 
 eval("console.log('Hello world!')"); // Executing string
 
+
+//Array methods
+
+let arr = ["grapefruit", 4, "hello", true, 5.6]
+
+arr.forEach((elem, index) =>{
+    console.log(`element ${index} is ${elem} of type ${typeof elem}`)
+})
+
+//Filtering array
+
+console.log(arr.filter((value) => { return typeof value == "string"}))
+
+//Checking condition for all elements
+
+console.log(arr.every((value) => { return typeof value == "string"})) // checking if true for every element
+console.log(arr.every((value) => { return typeof value !== "undefined"}))
+
+// Replacing part of the array with another part of the array:
+
+arr.copyWithin(0, 3, 4)
+console.log(arr)
+
+// Mapping the values of an array
+
+arr = [1, 2, 3, 4, 5, 1]
+console.log(arr.map((x) => x + 1))
+console.log(arr.map((x) => 2**x))
+
+// Finding the last occurrence in an array
+
+console.log(arr.lastIndexOf(1))
+console.log(arr.lastIndexOf(6))
