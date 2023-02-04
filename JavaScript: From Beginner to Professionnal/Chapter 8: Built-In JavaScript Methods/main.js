@@ -21,3 +21,7 @@ console.log(parseFloat("6"), typeof parseFloat("6"))
 console.log(parseFloat("0b1101010"), typeof parseFloat("0b1101010"))
 console.log(parseFloat("hello"), typeof parseFloat("hello"))
 
+//Executing Javascript with eval()
+
+eval("console.log('Hello world!')"); // Executing string
+
