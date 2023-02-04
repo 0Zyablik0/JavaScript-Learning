@@ -115,3 +115,39 @@ console.log(poem.startsWith("Violets"))
 
 console.log(poem.endsWith("too!"))
 console.log(poem.endsWith("too?"))
+
+// Number methods
+
+// isNan
+
+console.log('isNan("")', isNaN(""))
+console.log('isNan("hello")', isNaN("hello"))
+console.log('isNan(34)', isNaN(34))
+console.log('isNan("34")', isNaN("34"))
+
+// Checking if something is finite
+
+console.log(isFinite(34))
+console.log(isFinite("x"))
+console.log(isFinite(0/0))
+console.log(isFinite(Infinity))
+
+// Checking if something is an integer
+console.log("---------------------")
+console.log(Number.isInteger(34))
+console.log(Number.isInteger("5"))
+console.log(Number.isInteger("x"))
+console.log(Number.isInteger(0/0))
+console.log(Number.isInteger(Infinity))
+console.log(Number.isInteger(2.4))
+
+//Specifying the number of decimals
+console.log("---------------------")
+
+console.log(1.23456.toFixed(2))
+console.log(1.23456.toFixed(3))
+
+// Specifying precision
+console.log("---------------------")
+console.log(1.23456.toPrecision(2))
+console.log(1.23456.toPrecision(4))
