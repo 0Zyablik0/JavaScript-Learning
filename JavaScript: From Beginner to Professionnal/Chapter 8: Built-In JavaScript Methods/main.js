@@ -5,8 +5,24 @@ console.log(Number.isNaN(x))
 console.log(isNaN(x))
 
 
-//Parsing Numbers
+//Decoding and encoding URL
 
+//decodeURI and encodeURI
+
+let uri = "https://example.com/submit?name=artem kryukov"
+let encodedUri = encodeURI(uri)
+let decodedUri = decodeURI(encodedUri)
+console.log("Encoded:", encodedUri)
+console.log("Decoded:", decodedUri)
+//decodeURIComponent and encodeURIComponent
+console.log("---------------------")
+let encodedUriComponent = encodeURIComponent(uri)
+let decodedUriComponent = decodeURIComponent(encodedUriComponent)
+console.log("Encoded:", encodedUriComponent)
+console.log("Decoded:", decodedUriComponent)
+
+//Parsing Numbers
+console.log("---------------------")
 console.log(parseInt("6"), typeof parseInt("6"))
 console.log(parseInt("7.6"), typeof parseInt("7.6"))
 console.log(parseInt("0b1101010"), typeof parseInt("0b1101010"))
