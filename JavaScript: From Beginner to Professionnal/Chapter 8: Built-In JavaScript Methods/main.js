@@ -191,3 +191,54 @@ console.log("trunc -5.34:", Math.trunc(-5.34))
 console.log("---------------------")
 console.log("exp(2): ", Math.exp(2))
 console.log("log(2): ", Math.log(2))
+
+//Date methods
+
+// Creating dates
+console.log("---------------------")
+let currentDateTime = new Date()
+console.log(currentDateTime)
+console.log(Date.now())
+console.log(new Date(1000))
+console.log(new Date("Sun Feb 05 2023 15:05:03 GMT+0200"))
+console.log(new Date(2023 , 6, 23, 12, 10, 23))
+
+//Methods to get and set the elements of the date
+console.log("---------------------")
+let d = new Date()
+console.log("day of the week: ", d.getDay())
+console.log("day of the month: ", d.getDate())
+console.log("month: ", d.getMonth())
+console.log("year: ", d.getFullYear())
+console.log("hours: ", d.getHours())
+console.log("minutes: ", d.getMinutes())
+console.log("seconds: ", d.getSeconds())
+console.log("milliseconds: ", d.getMilliseconds())
+console.log("Time: ", d.getTime())
+
+d.setFullYear(2010)
+console.log(d)
+d.setMonth(10)
+console.log(d)
+d.setDate(19)
+console.log(d)
+d.setHours(10)
+console.log(d)
+d.setTime(1675601883766)
+console.log(d)
+
+// Parsing dates
+console.log("---------------------")
+
+console.log(Date.parse("June 5, 2021"))
+console.log(Date.parse("6/5/21"))
+
+// Converting a date to string
+console.log("---------------------")
+
+console.log(d.toDateString())
+console.log(d.toTimeString())
+console.log(d.toLocaleDateString())
+console.log(d.toISOString())
+console.log(d.toJSON())
+console.log(d.toUTCString())
