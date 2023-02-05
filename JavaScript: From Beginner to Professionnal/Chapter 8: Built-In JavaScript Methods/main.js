@@ -151,3 +151,43 @@ console.log(1.23456.toFixed(3))
 console.log("---------------------")
 console.log(1.23456.toPrecision(2))
 console.log(1.23456.toPrecision(4))
+
+// Math Methods
+
+// Finding the highest and lowest number
+console.log("---------------------")
+console.log("Max: ", Math.max(1, 34, 2, 523, 4, 129))
+console.log("Min: ",Math.min(1, 34, 2, 523, 4, 129))
+
+console.log("max of NaN: ", Math.max(1, 34, "hello"))
+
+// square root and raising to the power of
+console.log("---------------------")
+console.log("sqrt: ", Math.sqrt(64))
+console.log("pow: ", Math.pow(5, 3))
+
+// Turning decimals into integers: 
+
+console.log("---------------------")
+console.log("round 6.78:", Math.round(6.78))
+console.log("round 5.34:", Math.round(5.34))
+
+console.log("ceil 6.78:", Math.ceil(6.78))
+console.log("ceil 5.34:", Math.ceil(5.34))
+console.log("ceil -6.78:", Math.ceil(-6.78))
+console.log("ceil -5.34:", Math.ceil(-5.34))
+
+console.log("floor 6.78:", Math.floor(6.78))
+console.log("floor 5.34:", Math.floor(5.34))
+console.log("floor -6.78:", Math.floor(-6.78))
+console.log("floor -5.34:", Math.floor(-5.34))
+
+console.log("trunc 6.78:", Math.trunc(6.78))
+console.log("trunc 5.34:", Math.trunc(5.34))
+console.log("trunc -6.78:", Math.trunc(-6.78))
+console.log("trunc -5.34:", Math.trunc(-5.34))
+
+// Exponent and logarithm
+console.log("---------------------")
+console.log("exp(2): ", Math.exp(2))
+console.log("log(2): ", Math.log(2))
