@@ -89,3 +89,16 @@ let animalCount = /\b\d+ (pig|cow|dog)s?\b/;
 console.log("animalCount: ", animalCount.test("15 pigs"));
 console.log("animalCount: ", animalCount.test("1 dog"));
 console.log("animalCount: ", animalCount.test("20 dogcows"));
+
+
+// The replace method
+
+console.log("replace method: ", "papa".replace("p", "m"))
+console.log("replace method: ", "borobudur".replace(/[ou]/, "a"))
+console.log("replace method: ", "borobudur".replace(/[ou]/g, "a"))
+console.log("replace method: \n",
+    "\rLiskov, Barbara\nMcCarthy, John\nWadler, Philip"
+        .replace(/(\w+), (\w+)/g, "$2 $1"));
+
+let s = "the cia and fbi"
+console.log("replace method: ", s.replace(/\b(fbi|cia)\b/g, (str) => str.toUpperCase()))
