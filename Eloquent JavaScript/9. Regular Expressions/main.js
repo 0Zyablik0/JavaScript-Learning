@@ -102,3 +102,10 @@ console.log("replace method: \n",
 
 let s = "the cia and fbi"
 console.log("replace method: ", s.replace(/\b(fbi|cia)\b/g, (str) => str.toUpperCase()))
+
+//Greed
+
+function stripComments(code){
+    return code.replace(/\/\/.*|\/\*[^]*?\*\//g, "")
+}
+console.log(stripComments("1 /* a */+/* b \n*/ 1"))
