@@ -116,3 +116,8 @@ let name = 'harry';
 let text = 'Harry is a suspicious character';
 let regexp = new RegExp("\\b("+ name +")\\b", "gi");
 console.log(text.replace(regexp, "_$1_"))
+
+// The search method
+
+console.log("search method: ", "   ".search(/\S/))
+console.log("search method: ", "   word".search(/\S/))
